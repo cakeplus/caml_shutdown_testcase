@@ -1,7 +1,7 @@
 
-CLIBS    := -lm -ldl -ltinfo -lnums -lbigarray -lunix -lcamlstr
-BYTELIBS := nums.cma bigarray.cma unix.cma str.cma
-OPTLIBS  := nums.cmxa bigarray.cmxa unix.cmxa str.cmxa
+CLIBS = -lm -ldl -ltinfo -lnums -lbigarray -lunix -lcamlstr
+BYTELIBS = nums.cma bigarray.cma unix.cma str.cma
+OPTLIBS = nums.cmxa bigarray.cmxa unix.cmxa str.cmxa
 
 
 leak_test_loop_dll.so: leak.ml

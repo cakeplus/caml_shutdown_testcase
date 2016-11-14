@@ -12,7 +12,7 @@ void load_unload(int i, char *argv[])
 {
         void *h = dlopen("./leak_test_loop_dll.so", RTLD_LAZY);
 
-        void (*startup) (char**) = dlsym(h, "caml_startup");
+        void (*startup) (char**) = dlsym(h, "caml_startup_pooled");
         void (*shutdown) (void) = dlsym(h, "caml_shutdown");
         value* (*named_value) (char*) = dlsym(h, "caml_named_value");
         value (*callback2) (value, value, value) = dlsym(h, "caml_callback2");
